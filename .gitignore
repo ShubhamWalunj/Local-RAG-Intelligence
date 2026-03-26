@@ -1,0 +1,12 @@
+# Ignore the local Vector Database folder
+chroma_db/
+db/
+
+# Ignore Python cache and environment files
+__pycache__/
+*.pyc
+.env
+.ipynb_checkpoints/
+
+# Ignore temporary files created by the app
+temp.pdf
