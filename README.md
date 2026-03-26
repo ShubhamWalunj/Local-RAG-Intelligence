@@ -1,85 +1,65 @@
-📄 Local AI Document Intelligence Engine
-Tagline: A high-performance RAG (Retrieval-Augmented Generation) system for secure, private conversation with local PDF documents.
+# 📄 Local AI Document Intelligence Engine
 
-This project enables users to transform static PDF files into an interactive knowledge base. By leveraging Llama 3.1 and ChromaDB, it provides an end-to-end pipeline for document ingestion, vectorization, and natural language querying with full source attribution.
+**"A high-performance RAG system for secure, private conversation with local PDF documents using Llama 3.1 and ChromaDB."**
 
-✨ Features
-Local Vector Storage: Uses ChromaDB for high-speed, persistent storage of document embeddings.
+---
 
-Context-Aware Q&A: Powered by Llama-3.1-8B-Instant for precise, human-like responses.
+## 🚀 Overview
+This project enables users to transform static PDF files into an interactive knowledge base. By leveraging a **Retrieval-Augmented Generation (RAG)** architecture, it provides an end-to-end pipeline for document ingestion, vectorization, and natural language querying with full source attribution. 
 
-Source Attribution: Displays specific text chunks and page numbers used to generate each answer.
+Built with a focus on **Data Privacy**, all document processing and vector storage happen locally, ensuring sensitive information never leaves your environment.
 
-Secure Credential Management: Implements .env protocols to protect API keys from version control exposure.
+## ✨ Features
+* **Local Vector Storage:** Uses **ChromaDB** for high-speed, persistent storage of document embeddings.
+* **Context-Aware Q&A:** Powered by **Llama-3.1-8B-Instant** via Groq for lightning-fast, precise responses.
+* **Source Attribution:** Displays the specific text "chunks" and page numbers used as evidence for every answer.
+* **Secure Credential Management:** Implements `.env` protocols to protect API keys from version control exposure.
+* **Streamlit Interface:** A clean, intuitive web UI for document uploading and real-time chatting.
 
-Streamlit Interface: A clean, intuitive web UI for document uploading and real-time chatting.
+## 🛠️ Tech Stack
+* **LLM:** Llama 3.1 (Groq Cloud)
+* **Orchestration:** LangChain
+* **Vector Database:** ChromaDB
+* **Embeddings:** HuggingFace (`all-MiniLM-L6-v2`)
+* **Frontend:** Streamlit
 
-🛠️ Installation
-Ensure you have Python 3.9+ installed. Follow these steps to set up your local environment:
+## 📦 Installation & Setup
+1.  **Clone the Repository:**
+    ```bash
+    git clone [https://github.com/ShubhamWalunj/Local-RAG-Intelligence.git](https://github.com/ShubhamWalunj/Local-RAG-Intelligence.git)
+    cd Local-RAG-Intelligence
+    ```
+2.  **Install Dependencies:**
+    ```bash
+    pip install -r requirements.txt
+    ```
+3.  **Configure Environment:**
+    Create a `.env` file in the root directory and add your Groq API Key:
+    ```text
+    GROQ_API_KEY=your_api_key_here
+    ```
 
-Clone the Repository:
+## 🚀 Usage
+1.  **Launch the App:**
+    ```bash
+    streamlit run app.py
+    ```
+2.  **Interact:**
+    * Enter your API Key in the sidebar (if not in .env).
+    * Upload a PDF.
+    * Click **"Build Knowledge Base"**.
+    * Start chatting with your document!
 
-Bash
-git clone https://github.com/ShubhamWalunj/Local-RAG-Intelligence.git
-cd Local-RAG-Intelligence
-Create a Virtual Environment:
+## 📂 Project Structure
+* `app.py`: Main application logic and RAG pipeline.
+* `.env`: Private environment variables (Safely ignored by Git).
+* `.gitignore`: Prevents sensitive files from being uploaded.
+* `chroma_db/`: Directory where the local vector database is persisted.
+* `requirements.txt`: List of Python dependencies.
 
-Bash
-python -m venv venv
-source venv/bin/activate  # On Windows: venv\Scripts\activate
-Install Dependencies:
+## 📄 License
+Distributed under the **MIT License**.
 
-Bash
-pip install -r requirements.txt
-🚀 Usage
-Launch the Application:
-
-Bash
-streamlit run app.py
-Interact:
-
-Enter your Groq API Key in the sidebar.
-
-Upload a PDF document.
-
-Click "Build Knowledge Base" to trigger the RAG pipeline.
-
-Ask questions in the chat interface.
-
-📂 Project Structure
-Plaintext
-RAG_search_engine_project/
-├── app.py                # Main Streamlit application and RAG logic
-├── .env                  # Private environment variables (API keys)
-├── .gitignore            # Security guard for sensitive files
-├── requirements.txt      # Project dependency list
-├── chroma_db/            # Local vector database storage
-├── sample_document.pdf   # Demo data for testing
-└── 01_data_ingestion.ipynb # Development notebook for vectorization testing
-⚙️ Configuration
-The project requires a .env file in the root directory. Add your credentials as follows:
-
-Plaintext
-GROQ_API_KEY=your_gsk_api_key_here
-🤝 Contributing
-Contributions are welcome! To contribute:
-
-Fork the Project.
-
-Create your Feature Branch (git checkout -b feature/AmazingFeature).
-
-Commit your Changes (git commit -m 'Add some AmazingFeature').
-
-Push to the Branch (git push origin feature/AmazingFeature).
-
-Open a Pull Request.
-
-📄 License
-Distributed under the MIT License. See LICENSE for more information.
-
-💡 Acknowledgments
-Groq Cloud for providing high-speed inference.
-
-LangChain for the robust orchestration framework.
-
-HuggingFace for providing the all-MiniLM-L6-v2 embedding model.
+## 💡 Acknowledgments
+* **Groq Cloud** for high-speed LLM inference.
+* **LangChain** for the robust orchestration framework.
