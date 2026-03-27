@@ -8,6 +8,11 @@ from langchain_groq import ChatGroq
 from langchain_core.prompts import ChatPromptTemplate
 from langchain_classic.chains.combine_documents import create_stuff_documents_chain
 from langchain_classic.chains import create_retrieval_chain
+from dotenv import load_dotenv
+
+# This looks for the .env file and loads the variables
+load_dotenv()
+secret_api_key = os.getenv("GROQ_API_KEY")
 
 # --- 1. Page Configuration ---
 st.set_page_config(page_title="Local Enterprise RAG", layout="wide")

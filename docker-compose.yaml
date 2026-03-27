@@ -1,0 +1,12 @@
+services:
+  rag-engine:
+    build: .
+    container_name: local-rag-intelligence
+    ports:
+      - "8501:8501"
+    env_file:
+      - .env
+    # Optional: Persist the database if you change your mind later
+    # volumes:
+    #   - ./chroma_db:/app/chroma_db
+    restart: unless-stopped

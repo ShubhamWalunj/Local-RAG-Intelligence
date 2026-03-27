@@ -6,3 +6,4 @@ langchain-huggingface
 langchain-classic
 pypdf
 sentence-transformers
+python-dotenv

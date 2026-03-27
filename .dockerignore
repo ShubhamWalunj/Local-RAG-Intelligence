@@ -1,0 +1,7 @@
+.env
+__pycache__/
+.ipynb_checkpoints/
+anaconda_projects/
+chroma_db/
+
+#we ignore chroma_db bc the container should build its own fresh database from the document we upload in the UI.
