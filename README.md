@@ -1,6 +1,6 @@
 # 📄 Local AI Document Intelligence Engine
 
-**"A high-performance RAG system for secure, private conversation with local PDF documents using Llama 3.1 and ChromaDB."**
+**A high-performance RAG system for secure, private conversation with local PDF documents using Llama 3.1 and ChromaDB.**
 
 ---
 
