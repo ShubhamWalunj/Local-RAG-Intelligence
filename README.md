@@ -42,7 +42,7 @@ Built with a focus on **Data Privacy**, all document processing and vector stora
 ## 🚀 Usage
 1.  **Launch the App:**
     ```bash
-    streamlit run app.py
+    python -m streamlit run app.py
     ```
 2.  **Interact:**
     * Enter your API Key in the sidebar (if not in .env).
